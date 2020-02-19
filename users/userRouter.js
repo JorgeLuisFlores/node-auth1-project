@@ -13,7 +13,6 @@ router.get('/', authMiddle, (req, res) => {
     UserData.find()
         .then(users => {
             res.json(users);
-
         })
         .catch(err => res.send(err));
 });
